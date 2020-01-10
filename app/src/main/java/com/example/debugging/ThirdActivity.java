@@ -18,7 +18,9 @@ public class ThirdActivity extends AppCompatActivity {
         init();
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) { // nincs megírva az intent
+                Intent intent = new Intent(ThirdActivity.this,Menu.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -26,6 +28,6 @@ public class ThirdActivity extends AppCompatActivity {
 
     public void init()
     {
-        buttonBack = findViewById(R.id.buttonExit);
+        buttonBack = findViewById(R.id.buttonBack);//rossz gombnév
     }
 }
